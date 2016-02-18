@@ -6,7 +6,7 @@ import Level.*;
 import Main.Menu.*;
 import Main.Intro.*;
 
-public class MAIN extends JFrame 
+public class MAIN extends JFrame
 {
    public final static int block = 32;
    public final static int width = 22;
@@ -17,7 +17,7 @@ public class MAIN extends JFrame
    private Level level = new Level(currentLevel,this);
    private Menu menu;
 
-   public MAIN() 
+   public MAIN()
    {
       super("3");
       // setIconImage();
@@ -29,7 +29,7 @@ public class MAIN extends JFrame
       pack();
       setVisible(true);
    }
-   
+
    public void changePanel(int choice)
    {
       getContentPane().removeAll();
@@ -77,11 +77,11 @@ public class MAIN extends JFrame
       }
       getRootPane().revalidate();
    }
-   
-   public void changeLevel(int next) 
+
+   public void changeLevel(int next)
    {
       currentLevel++;
-      if(currentLevel < 7) 
+      if(currentLevel < 7)
       {
          getContentPane().removeAll();
          level = new Level(currentLevel,this);
@@ -90,13 +90,13 @@ public class MAIN extends JFrame
          repaint();
          level.requestFocusInWindow();
       }
-      else 
+      else
       {
-      //loads credits
+         //loads credits
       }
-   }  
-   
-   public static void main(String[]args) 
+   }
+
+   public static void main(String[]args)
    {
       new MAIN();
    }
